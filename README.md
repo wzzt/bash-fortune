@@ -4,6 +4,7 @@ This script downloads sets of quotes off of bash.org to a file, then prints out 
 
 # Version History
 
+- 1.01: proper asynchronous execution of quote retrieval script upon exit
 - 1.0: first release
 
 # Installation

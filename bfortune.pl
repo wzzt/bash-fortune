@@ -32,9 +32,9 @@ sub retrieve_new_fortunes {
     my ($bg) = @_; # If bg, run in background
     if ($bg) {
         if ($^O eq 'MSWin32') {
-            system("start /B perl \"$PROGDIR$GETSCRIPT\" 2>NUL");
+            system(1, "perl \"$PROGDIR$GETSCRIPT\" 2>NUL");
         } else {
-            system("perl \"$PROGDIR$GETSCRIPT\" & 2>/dev/null");
+            exec("perl \"$PROGDIR$GETSCRIPT\" & 2>/dev/null");
         }
     } else {
         if (system("perl \"$PROGDIR$GETSCRIPT\"")) {
